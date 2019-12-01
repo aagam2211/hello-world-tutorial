@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function myDie() {
+
+            var theImage = document.getElementById('dice');
+            var imgDir = 'images/';
+            var imgArr = ['','die_1_100x100.png','die_2_100x100.png','die_3_100x100.png','die_4_100x100.png','die_5_100x100.png','die_6_100x100.png'];
+            var x = Math.floor((Math.random() * 6) + 1);
+            var imgPath = imgDir + imgArr[x];
+
+            theImage.src = imgPath;
+            theImage.alt = imgArr[x];
+           // var imgStr = '<img src="' + path + img + '" alt = "">';
+
+            document.getElementById("demo").innerHTML = x;
+
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Aagam Shah</title>
+    <h1>Exercise 3</h1>
+
+</head>
+<body>
+<br><br><br><br><br>
+<label>Dice image: <img src="images/die_1_100x100.png" id="dice"></label>
+<br><br><br><br><br>
+<label>Your Dice Number: <label id="demo">1</label></label>
+<br><br><br><br><br>
+<button onclick="myDie()">Roll Dice</button>
+
+
+
+<br><br><br><br><br>
+</body>
+<footer>Aagam Shah</footer>
+</html>
